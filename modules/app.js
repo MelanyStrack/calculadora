@@ -11,3 +11,8 @@ function agregarOperacion(arrayPusheado){
     let registroJson = JSON.stringify(arrayPusheado);
     fs.writeFileSync(path, registroJson)
 }
+
+module.exports = {
+    leerRegistro,
+    agregarOperacion
+}
