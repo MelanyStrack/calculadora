@@ -2,7 +2,7 @@ let operaciones = require("./modules/operaciones.js");
 let suma = require("./modules/suma.js")
 let resta = require("./modules/resta.js");
 let multiplicacion = require("./modules/multiplicacion.js");
-//let division = require(".modules/division.js")
+let division = require("./modules/division.js")
 const {leerRegistro, agregarOperacion} = require("./modules/app.js")
 
 let funcionLeer = leerRegistro()
@@ -33,4 +33,10 @@ function calculadora(cb, numero1, numero2) {
     return resultadoNuevo
 }
 
-console.log(`operacion : ${operacion}, resultado: ${calculadora(operaciones(operacion), numero1, numero2)}`);
+//console.log(`operacion : ${operacion}, resultado: ${calculadora(operaciones(operacion), numero1, numero2)}`);
+function lista() {
+    return   funcionLeer.forEach(function(element){
+           console.log(element)
+       })
+   }
+lista()
