@@ -10,8 +10,9 @@ let funcionLeer = leerRegistro()
 let operacion = process.argv[2]
 let numero1 = +process.argv[3]
 let numero2 = +process.argv[4]
+let imprimirLista = process.argv[5]
     
-function calculadora(cb, numero1, numero2) {
+function calculadora(cb, numero1, numero2, imprimir) {
     let resultadoNuevo = cb(numero1, numero2)
     let matematica = cb
     if (cb == suma) {
@@ -30,13 +31,12 @@ function calculadora(cb, numero1, numero2) {
      }
      funcionLeer.push(objeto)
     agregarOperacion(funcionLeer)
+    if (imprimir == "registro") {
+        funcionLeer.forEach(function(element){
+            console.log(element)
+        })
+    }
     return resultadoNuevo
 }
 
-//console.log(`operacion : ${operacion}, resultado: ${calculadora(operaciones(operacion), numero1, numero2)}`);
-function lista() {
-    return   funcionLeer.forEach(function(element){
-           console.log(element)
-       })
-   }
-lista()
+console.log(`operacion : ${operacion}, resultado: ${calculadora(operaciones(operacion), numero1, numero2, imprimirLista)}`);
