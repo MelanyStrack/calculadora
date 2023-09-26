@@ -1,7 +1,7 @@
 let suma = require("./suma.js")
 let resta = require("./resta.js");
 let multiplicacion = require("./multiplicacion.js");
-// let division = require("./division.js")
+let division = require("./division.js")
 
 
 function operaciones(operacion) {
